@@ -3,7 +3,7 @@ MyApp::Application.routes.draw do
   match '/home', to: 'static_pages#home'
   match '/help', to: 'static_pages#help'
   match '/contact', to: 'static_pages#contact'
-
+  root to: 'static_pages#home'
   resources :microposts
 
   resources :users
@@ -57,7 +57,7 @@ MyApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'static_pages#home'
+   #root :to => 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 
